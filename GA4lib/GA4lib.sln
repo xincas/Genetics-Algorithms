@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA4lib", "GA4lib.csproj", "{C22E2B18-6CDE-4261-81EE-9830ABC06E5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C22E2B18-6CDE-4261-81EE-9830ABC06E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C22E2B18-6CDE-4261-81EE-9830ABC06E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C22E2B18-6CDE-4261-81EE-9830ABC06E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C22E2B18-6CDE-4261-81EE-9830ABC06E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41B46288-61A9-4BB6-9543-FDE97BD48690}
+	EndGlobalSection
+EndGlobal
