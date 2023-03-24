@@ -9,16 +9,16 @@ double currentVelocityRatio = 0.3;
 double localVelocityRatio = 2;
 double globalVelocityRatio = 5;
 
-double[] minvalues = new double[dimension];
-double[] maxvalues = new double[dimension];
+double[] minValues = new double[dimension];
+double[] maxValues = new double[dimension];
 
 for (int i = 0; i < dimension; i++)
 {
-    minvalues[i] = -5.12;
-    maxvalues[i] = 5.12;
+    minValues[i] = -5.12;
+    maxValues[i] = 5.12;
 }
 
-RastriginFunction func = new RastriginFunction(minvalues, maxvalues);
+RastriginFunction func = new RastriginFunction(minValues, maxValues);
 
 Swarm swarm = new Swarm(
     func,
@@ -36,20 +36,20 @@ swarm.SetListener(it =>
 {
     if (it.Iteration == 0 || it.Iteration == itercount - 1)
     {
-        using StreamWriter sw = new("D:\\repos\\GA7\\points.txt", true);
+        using StreamWriter sw = new("points.txt", true);
         foreach (Particle p in it.Particles)
             sw.WriteLine($"{string.Join('\t', p.Position)}\t{swarm.FinalFunction(p.Position)}");
         sw.WriteLine();
     }
 });
 
-File.Delete("D:\\repos\\GA7\\points.txt");
+File.Delete("points.txt");
 Stopwatch stopwatch= Stopwatch.StartNew();
 swarm.Evolve(itercount);
 stopwatch.Stop();
 Console.WriteLine($"Time spent: {stopwatch.ElapsedMilliseconds}ms");
 
-RunCmd("D:\\repos\\GA7\\plot.py", "");
+RunCmd("plot.py", "");
 
 void RunCmd(string cmd, string args)
 {
